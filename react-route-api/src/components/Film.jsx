@@ -9,33 +9,24 @@ class Film extends Component {
 
         this.state = {
             a: [],
-        }
-
+        };
     }
 
     componentDidMount() {
-        console.log(this.props.match.params.id);
-
 
         fetch(`https://ghibliapi.herokuapp.com/films/${this.props.match.params.id}`)
             .then((res) => {
                 return res.json();
             })
-
-
             .then(
-
             (data) => {
                 this.setState({ a: data });
-
             });
 
 
     }
 
     render() {
-
-        console.log(this.state.a);
 
         return (
 
@@ -45,6 +36,18 @@ class Film extends Component {
                 </div>
                 <div className="d">
                     <div>Description: {this.state.a.description}</div>
+                </div>
+                <div className="di">
+                    <div>Director: {this.state.a.director}</div>
+                </div>
+                <div className="c">
+                    <div>Producer: {this.state.a.producer}</div>
+                </div>
+                <div className="r">
+                    <div>Release Date: {this.state.a.release_date}</div>
+                </div>
+                <div className="rt">
+                    <div>RT Score: {this.state.a.rt_score}</div>
                 </div>
             </div>
         );

@@ -6,15 +6,18 @@
  .App-logo {
   /* animation: App-logo-spin infinite 0.2s linear; */
   height: 400px;
-} 
+}
+
+.logo {
+    text-align: center;
+}
 
 .App-header {
   background-color: silver;
-  height: 450px;
+  height: 400px;
   padding: 20px;
   color: white;
   margin: 1em;
-  
 }
 
 .App-title {
@@ -26,7 +29,7 @@
 .App-intro {
   font-size: large;
   margin: 1em;
-} 
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
@@ -36,11 +39,28 @@
 .card {
   border: 0.1em solid black;
   margin: 0.15em;
-  display: inline-block;
+  /* display: inline-block; */
   padding: 0.15em;
- 
+  text-align: center;
+
 }
 
 .button {
   display: inline-block;
+}
+
+.Links {
+    text-align: center;
+}
+
+.link {
+    display: inline-block;
+    margin: 1em;
+    border: 0.05em solid black;
+    padding: 0.5em;
+}
+
+.home {
+    margin: 1em;
+    text-align: center;
 }

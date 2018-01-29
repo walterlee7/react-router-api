@@ -8,19 +8,28 @@ import Stats from './Stats';
 import Film from './Film';
 
 class App extends Component {
-    
-    render () {
+
+    render() {
         return (
             <Router>
                 <Fragment>
                     <Header />
-                    <Link to="/">Home Page</Link>
-                    <br></br>
-                    <Link to="/title">Title Page</Link>
-                    <br></br>                                 
-                    <Link to="/people">People Page</Link>
-                    <br></br>
-                    <Link to="/stats">Stats Page</Link>
+                    <div className="Links">
+                        <div className="link">
+                            <Link to="/">Home Page</Link>
+                        </div>
+                        <div className="link">
+                            <Link to="/title">Title Page</Link>
+                        </div>
+
+                        <div className="link">
+                            <Link to="/people">People Page</Link>
+                        </div>
+
+                        <div className="link">
+                            <Link to="/stats">Stats Page</Link>
+                        </div>
+                    </div>
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route exact path="/title" component={Title} />
